@@ -1,0 +1,97 @@
+﻿@page
+@model VetApp_prj.Pages.PatientModel
+@{
+    ViewData["Title"] = "Index";
+   
+}
+<partial name="AdminNavBar"/>
+<center>
+<p>
+   
+    <a asp-page="AjoutPatient"><input  class="btn btn-primary" value="Create New" /></a>
+</p>
+</center>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Age)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Espece)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Race)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Couleur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].MicroPuce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Sexe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Sterilise)
+            </th>
+          
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].AlerteMedical)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Vaccination)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Patient) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Espece)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Race)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Couleur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MicroPuce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sterilise)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.AlerteMedical)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vaccination)
+            </td>
+            <td>
+                <a asp-page="./PatientCRUD/Edit" asp-route-id="@item.IdPatient"><span><i style="color:green;" class="fa-solid fa-xl fa-pen-to-square"></i></span></a>&nbsp;&nbsp;&nbsp;
+                <a asp-page="./PatientCRUD/Details" asp-route-id="@item.IdPatient"><span><i style="color:grey;"class="fa-solid fa-xl fa-circle-info"></i></span></a>&nbsp;&nbsp;&nbsp;
+                <a asp-page="./PatientCRUD/Delete" asp-route-id="@item.IdPatient"><span style="color:red;"><i class="fa-solid fa-xl fa-trash"></i></span></a>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

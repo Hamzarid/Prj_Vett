@@ -1,0 +1,86 @@
+﻿@page
+@model VetApp_prj.Pages.ClientModel
+@{
+}
+
+@{
+    ViewData["Title"] = "Index";
+}
+<partial name="AdminNavBar"/>
+<center>
+    <p>
+        <h1>
+            List of Clients
+        </h1>
+    </p>
+<p>
+    <a asp-page="./ClientCRUD/Create"><input  class="btn btn-primary" value="Create New" /></a>
+</p>
+</center>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].Adresse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].Tel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].Reference)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].Login)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].Pwd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Client) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reference)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Login)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pwd)
+            </td>
+            <td>
+                <a asp-page="./ClientCRUD/Edit" asp-route-id="@item.IdClient"><span><i style="color:green;" class="fa-solid fa-xl fa-pen-to-square"></i></span></a>&nbsp;&nbsp;&nbsp;
+                <a asp-page="./ClientCRUD/Details" asp-route-id="@item.IdClient"><span><i style="color:grey;"class="fa-solid fa-xl fa-circle-info"></i></span></a>&nbsp;&nbsp;&nbsp;
+                <a asp-page="./ClientCRUD/Delete" asp-route-id="@item.IdClient"><span style="color:red;"><i class="fa-solid fa-xl fa-trash"></i></span></a>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

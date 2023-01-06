@@ -1,0 +1,50 @@
+To Do:
+WIP:
+
+SECTION ADMIN:
+none 
+
+SECTION CLIENT:
+none 
+
+BONUS:
+-Localisation + Globalisation
+-Systeme de recommendation 
+
+Already Done:
+BOTH:
+-gérer se deconnecter pour client et admin
+-gérer le backend de la page inscription
+-gérer le backend de la page connexion admin
+-gérer le backend de la page connexion client
+-génerer Entity Framework + dbContext
+-gérer les espaces entre les champs des formulaires and design
+-gérer les messages d'erreur
+(-->connexion if true redirection if no message d'erreur 
+ -->inscription redirection vers connexion or message
+ -->modifier les informarions = message
+ -->ajout patient = message )
+-gérer la redirection vers indexAdmin and indexClients 
+
+SECTION ADMIN:
+-gérer la page indexAdmin avec NavBar
+-gérer le backend de la page ajout patient 
+-gérer client (Cdrud) + page ajouter Client
+-gérer patient (Cdrud) + page ajouter Patient
+-gérer Agenda (Crud)
+-gérer Page Prob et Stat avec StreamLit + AI
+
+SECTION CLIENT:
+-gérer la page indexClients avec Navbar
+-gérer le backend d info perso
+-gérer voir les produits dispo en list
+-gérer voir plus de detail sur un seul produit
+-gérer Dossier medicale d'un patient ou plus (juste Voir no edits)
+-gérer prendre un RDV
+-Acheter avec PayPal + Cart
+
+
+
+
+
+

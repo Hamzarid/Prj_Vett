@@ -1,0 +1,168 @@
+﻿@page
+@model VetApp_prj.Pages.AjoutPatientModel
+@{
+}
+<partial name="AdminNavBar"/>
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="fr"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Veuillez entrer infos animal">
+    <meta name="description" content="">
+    <title>AjoutPatient</title>
+    <link rel="stylesheet" href="css/nicepage.css" media="screen">
+<link rel="stylesheet" href="css/AjoutPatient.css" media="screen">
+    <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+<style>
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+
+  
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="AjoutPatient">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode" data-lang="fr">
+    <section class="u-clearfix u-gradient u-section-1" id="sec-154e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-center u-text u-text-default u-text-1">Veuillez entrer information animal</h1>
+        <div class="u-form ">
+        <center><form  method="post" enctype="multipart/form-data" style="padding-right: 250px; padding-left: 250px; padding-top: 20px;" >
+            <div class="u-form-group u-form-name u-label-none">
+             
+              <input type="text" placeholder="Nom animal" id="name-3b9a" name="nomAnimal" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-1" required="">
+            </div><br />
+            <div class="u-form-group u-form-select u-label-none u-form-group-2">
+            
+              <div class="u-form-select-wrapper">
+                <select id="select-c661" name="selectSexe" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-2">
+                  <option value="Mâle">Mâle</option>
+                  <option value="Femelle">Femelle</option>
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div><br />
+            <div class="u-form-group u-label-none u-form-group-3">
+             
+              <input type="text" placeholder="Couleur" id="text-5783" name="clr" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-3">
+            </div>
+            <br />
+            <div class="u-form-group u-form-name u-label-none u-form-group-4">
+            
+              <input type="text" placeholder="âge" id="name-2e34" name="ageAnimal" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-4" required="">
+            </div>
+             <br />
+            <div class="u-form-email u-form-group u-label-none">
+             
+              <input type="text" placeholder="Espèce " id="email-3b9a" name="espece" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-5" required="">
+            </div> <br />
+            <div class="u-form-group u-form-phone u-label-none u-form-group-6">
+             
+              <input type="tel" placeholder="Race" id="phone-c1e9" name="race" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-6" required="">
+            </div> <br />
+            <div class="u-form-group u-label-none u-form-group-7">
+            
+              <input type="text" placeholder="micropuce" id="text-6975" name="micropuce" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-7">
+            </div> <br />
+            <div class="u-form-group u-form-phone u-label-none u-form-group-6">
+             
+              <input type="file" name="postedFiles" placeholder="Insert image" id="phone-c1e9" name="image" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-6" required="">
+            </div> <br />
+            <p class="u-form-group u-form-partition-factor-2 u-form-text u-text u-text-2">Vaccination:</p>
+            <div class="u-form-group u-form-input-layout-horizontal u-form-partition-factor-2 u-form-radiobutton u-label-none u-form-group-9">
+             
+              <div class="u-form-radio-button-wrapper">
+                <div class="u-input-row">
+                  <input type="radio" name="radiobutton" value="OUI">
+                  <label class="u-label" for="radiobutton">OUI</label>
+                </div>
+                <div class="u-input-row">
+                  <input type="radio" name="radiobutton" value="NON">
+                  <label class="u-label" for="radiobutton">NON</label>
+                </div>
+              </div>
+            </div> <br />
+            <p class="u-form-group u-form-partition-factor-2 u-form-text u-text u-text-3"> Stérilisation :</p>
+            <div class="u-form-checkbox-group u-form-group u-form-input-layout-horizontal u-form-partition-factor-2 u-label-none u-form-group-11">
+              <label class="u-label">Stérilisation:</label>
+              <div class="u-form-checkbox-group-wrapper">
+                <div class="u-input-row">
+                  <input id="field-668b" type="checkbox" value="OUI" name="sterilisation">
+                  <label class="u-label" for="field-668b">OUI</label>
+                </div> 
+                <div class="u-input-row">
+                  <input id="field-b758" type="checkbox" value="NON" name="sterilisation">
+                  <label class="u-label" for="field-b758">NON</label>
+                </div>
+              </div>
+            </div><br />
+            <div class="u-form-group u-form-textarea u-label-none u-form-group-12">
+            
+              <textarea rows="4" cols="50" id="textarea-db44" name="textarea" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-8" required="" placeholder="Alerte Médicale"></textarea>
+            </div><br />
+            
+            <div class="u-align-center u-form-group  ">
+                <input type="submit" name="Sinscrire"  id="myBtn" class="u-border-2 u-border-black u-btn u-btn-round u-btn-submit u-button-style u-none u-radius-30 u-btn-1" value="Ajouter"
+                asp-page-handler="Soumettre" />
+                </div>
+            <br>
+              @Html.Raw(Model.alert)
+            <br />
+            <br />
+            <br />
+            <br /> 
+            <br />
+          </form></center>
+          
+
+            
+
+            
+        </div>
+      
+      </div>
+    </section>
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
+
+  
+</body></html>

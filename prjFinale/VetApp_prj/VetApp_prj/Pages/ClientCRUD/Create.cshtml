@@ -1,0 +1,71 @@
+﻿@page
+@model VetApp_prj.Pages.ClientCRUD.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<partial name="AdminNavBar"/>
+<center>
+<h1>Create Client</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4" style="margin-left:500px">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Client.Nom" class="control-label"></label>
+                <input asp-for="Client.Nom" class="form-control" />
+                <span asp-validation-for="Client.Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Client.Prenom" class="control-label"></label>
+                <input asp-for="Client.Prenom" class="form-control" />
+                <span asp-validation-for="Client.Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Client.Adresse" class="control-label"></label>
+                <input asp-for="Client.Adresse" class="form-control" />
+                <span asp-validation-for="Client.Adresse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Client.Email" class="control-label"></label>
+                <input asp-for="Client.Email" class="form-control" />
+                <span asp-validation-for="Client.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Client.Tel" class="control-label"></label>
+                <input asp-for="Client.Tel" class="form-control" />
+                <span asp-validation-for="Client.Tel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Client.Reference" class="control-label"></label>
+                <input asp-for="Client.Reference" class="form-control" />
+                <span asp-validation-for="Client.Reference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Client.Login" class="control-label"></label>
+                <input asp-for="Client.Login" class="form-control" />
+                <span asp-validation-for="Client.Login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Client.Pwd" class="control-label"></label>
+                <input type="password" asp-for="Client.Pwd" class="form-control" />
+                <span asp-validation-for="Client.Pwd" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-page="../Client"><input  class="btn btn-primary" value="Back to list" /></a>
+</div>
+</center>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

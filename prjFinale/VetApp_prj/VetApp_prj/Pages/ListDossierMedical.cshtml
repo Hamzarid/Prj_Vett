@@ -1,0 +1,51 @@
+﻿@page
+@model VetApp_prj.Pages.ListDossierMedicalModel
+@{
+}
+<partial name="ClientNavBar" />
+
+<head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" media="screen">
+
+</head>
+<ul>
+</ul>
+<center><h1 class="u-custom-font u-font-merriweather u-text u-text-default u-text-1">Vos Patients</h1></center>
+<table id="aptient" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+
+            
+            <th>Nom</th>
+            <th>Age</th>
+            <th>Race</th>
+            <th>Couleur</th>
+            <th>Plus de Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <center>
+  @foreach (Models.Patient patient in Model.patient)
+            {<tr>
+               
+                <td>@patient.Nom</td>
+                <td>@patient.Age</td>
+                <td>@patient.Race</td>
+                <td>@patient.Couleur</td>
+                <td> <a asp-page="./DossierMedical" asp-route-id="@patient.IdPatient" ><span><i style="color:grey;"class="fa-solid fa-xl fa-circle-info"></i></span></a></td></tr>
+            }
+        </center>
+          
+
+        
+
+</table>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

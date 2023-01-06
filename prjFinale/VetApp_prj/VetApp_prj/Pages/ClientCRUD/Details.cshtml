@@ -1,0 +1,71 @@
+﻿@page
+@model VetApp_prj.Pages.ClientCRUD.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<partial name="AdminNavBar"/>
+<center>
+
+
+<h1>Details Client</h1>
+
+<div>
+   
+    <hr />
+    <dl class="row" style="margin-left:330px">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Client.Nom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Client.Nom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Client.Prenom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Client.Prenom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Client.Adresse)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Client.Adresse)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Client.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Client.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Client.Tel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Client.Tel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Client.Reference)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Client.Reference)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Client.Login)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Client.Login)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Client.Pwd)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Client.Pwd)
+        </dd>
+    </dl>
+</div>
+<div>
+      <a asp-page="./Edit" asp-route-id="@Model.Client?.IdClient"><input  class="btn btn-primary" value="Edit" /> </a> 
+    <a asp-page="../Client"><input  class="btn btn-primary" value="Back to list" /></a>
+</div>
+</center>
